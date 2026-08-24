@@ -22,7 +22,6 @@ export const RegisterForm = () => {
         seterror("Password is required");
         return;
       } 
-
       seterror("");
 
   }
@@ -37,7 +36,7 @@ export const RegisterForm = () => {
               <h1 className='text-2xl font-bold text-gray-900 tracking-tight'>TravelAdmin</h1>
               <p className='text-sm text-gray-500 mt-1'>Management System</p>
           </div>
-          <h1 className='text-xl font-bold text-gray-900'>Create Acount</h1>
+          <h1 className='text-xl font-bold text-gray-900'>Create Account</h1>
           <p className='text-sm text-gray-500 mt-1 mb-6'>Enter your information for create account.</p>
 
           <form action=""  onSubmit={handleSubmit} className="space-y-5">
