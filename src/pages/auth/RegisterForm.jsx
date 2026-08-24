@@ -22,9 +22,6 @@ export const RegisterForm = () => {
         seterror("Password is required");
         return;
       } 
-      console.log({
-        name, email, password
-      });
 
       seterror("");
 
