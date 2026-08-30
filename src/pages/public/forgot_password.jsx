@@ -28,7 +28,7 @@ export default function ForgotPassword() {
         />
 
       //   {/* Small center line */}
-      {/* // </div> */} */
+      {/* // </div> */} 
       {/* <img
   src={airplaneIcon}
   alt="TravelAdmin"
