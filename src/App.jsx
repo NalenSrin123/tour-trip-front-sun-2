@@ -1,6 +1,18 @@
-import LoginPage from './pages/auth/LoginPage'
+import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Destination from './pages/admin/destinations/Destination'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 
-export default function App() {
-  return <LoginPage />
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Destination />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
 }
 
