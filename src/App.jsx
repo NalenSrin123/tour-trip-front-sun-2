@@ -4,12 +4,17 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import BookingList from './components/booking/BookingList'
+import CreateGuide from './components/guide/CreateGuide'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BookingList />
+    <>
+    {/* <BookingList /> */}
+    <CreateGuide />
+
+    </>
   )
 }
 
