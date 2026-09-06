@@ -12,6 +12,7 @@ import Sidebar from './components/layout/sidebar'
 import Header from './components/layout/header'
 import Footer from './components/footer'
 import PageListUser from './pages/admin/users/page_list_user'
+import GuidesList from "./pages/admin/guides/GuidesList";
 
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
@@ -33,6 +34,7 @@ function App() {
          
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
+          <Route path="/guides" element={<GuidesList />} />
       </Routes>
     
     </>

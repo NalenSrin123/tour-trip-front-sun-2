@@ -74,13 +74,13 @@ export default function GuildList() {
         </div>
 
         <div className="rounded-md border border-[#c9c9df] bg-white/40 px-4 py-3">
-          <p className="text-xs font-medium tracking-wider text-gray-500">
-            TOTAL GUIDES
-          </p>
+            <p className="text-xs font-medium tracking-wider text-gray-500">
+              TOTAL GUIDES
+            </p>
 
-          <p className="mt-1 text-2xl font-bold text-indigo-700">
-            {guideList.length}
-          </p>
+            <p className="mt-1 text-2xl font-bold text-indigo-700">
+              {guideList.length}
+            </p>
         </div>
       </div>
 
