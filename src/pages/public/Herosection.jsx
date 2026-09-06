@@ -94,16 +94,16 @@ export default function Herosection({ images = [], autoPlay = true }) {
             expert-guided tours.
           </p>
 
-          <div className="mt-10 flex animate-fade-up flex-col items-center gap-4 [animation-delay:0.6s] sm:flex-row">
+          <div className="mt-10 flex w-full animate-fade-up flex-col items-center gap-4 [animation-delay:0.6s] sm:w-auto sm:flex-row">
             <a
               href="#tours"
-              className="rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-emerald-600"
+              className="w-full rounded-lg bg-emerald-500 px-6 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-emerald-600 sm:w-auto"
             >
               Explore Tours
             </a>
             <a
               href="#destinations"
-              className="rounded-lg border-2 border-white/80 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10"
+              className="w-full rounded-lg border-2 border-white/80 px-6 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10 sm:w-auto"
             >
               View Destinations
             </a>
