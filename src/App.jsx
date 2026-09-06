@@ -4,6 +4,7 @@ import Destination from './pages/admin/destinations/Destination'
 import CreateTour from './pages/admin/tours/CreateTour';
 import BookingList from './components/booking/BookingList'
 import CreateGuide from './components/guide/CreateGuide'
+import TourListPage from './pages/admin/tours/TourListPage'
 
 function App() {
   return (
