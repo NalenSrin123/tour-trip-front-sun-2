@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { FiArrowUpRight, FiVolumeX } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
+import { TbHeartOff } from "react-icons/tb";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -36,10 +37,10 @@ const Header = () => {
         <div className="flex shrink-0 items-center gap-3">
           <button
             type="button"
-            aria-label="Toggle sound"
+            aria-label="Favorites"
             className="hidden h-7 w-7 items-center justify-center text-[#142443] transition-colors hover:text-[#0da88d] sm:flex"
           >
-            <FiVolumeX size={17} strokeWidth={1.8} />
+            <TbHeartOff size={28} strokeWidth={1.8} />
           </button>
           <Link
             to="/login"
