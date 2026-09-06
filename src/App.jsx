@@ -9,8 +9,6 @@ import Customers from './components/admin/customers/Customers'
 import Destinations from './pages/admin/destinations/destinations'
 import RevenueOverview from './components/tour/RevenueOverview'
 import Sidebar from './components/layout/sidebar'
-import Header from './components/layout/header'
-import Footer from './components/footer'
 import PageListUser from './pages/admin/users/page_list_user'
 import GuidesList from "./pages/admin/guides/GuidesList";
 
@@ -30,7 +28,6 @@ function App() {
           <Route path='/table_destinations' element={<Destinations/>}/>
           <Route path='/overview' element={<RevenueOverview/>}/>
           <Route path='/sidebar' element={<Sidebar/>}/>
-          <Route path='/header' element={<Header/>}/>
          
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />

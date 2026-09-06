@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./sidebar";
-import Header from "./header";
 
 const AdminLayout = () => {
   return (
@@ -9,7 +8,7 @@ const AdminLayout = () => {
         <Sidebar />
       </div>
       <div className="flex min-w-0 flex-1 flex-col pl-64">
-        <Header />
+
         <main className="flex-1">
           <Outlet />
         </main>
