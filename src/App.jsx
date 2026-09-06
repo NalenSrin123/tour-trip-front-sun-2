@@ -1,13 +1,14 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Destination from './pages/admin/destinations/Destination'
-import CreateTour from './pages/admin/tours/CreateTour';
+import { RegisterForm } from './pages/auth/RegisterForm'
+import LoginPage from './pages/auth/LoginPage'
 import BookingList from './components/booking/BookingList'
-import CreateGuide from './components/guide/CreateGuide'
-import TourListPage from './pages/admin/tours/TourListPage'
-import GuildList from "./pages/admin/guides/GuidesList";
-import Header from './components/header'
-import Footer from './components/footer'
+import Customers from './components/admin/customers/Customers'
+import Destinations from './pages/admin/destinations/destinations'
+import RevenueOverview from './components/tour/RevenueOverview'
+import Sidebar from './components/layout/sidebar'
+import Header from './components/layout/header'
 
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
@@ -16,10 +17,17 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/destination' element={<Destination />} />
-          <Route path='/' element={<CreateTour />} />
-          <Route path='/' element={<CreateCustomer />} />
-          <Route path="/" element={<GuildList />} />
+          
+          <Route path='/register' element={<RegisterForm/>}/>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/listbooking' element={<BookingList/>}/>
+          <Route path='/customer' element={<Customers/>}/>
+          <Route path='/destination' element={<Destination/>}/>
+          <Route path='/table_destinations' element={<Destinations/>}/>
+          <Route path='/overview' element={<RevenueOverview/>}/>
+          <Route path='/sidebar' element={<Sidebar/>}/>
+          <Route path='/header' element={<Header/>}/>
+         
         </Routes>
       </BrowserRouter>
       <div className="flex min-h-screen flex-col">
