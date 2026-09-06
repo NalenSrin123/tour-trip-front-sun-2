@@ -6,6 +6,8 @@ import BookingList from './components/booking/BookingList'
 import CreateGuide from './components/guide/CreateGuide'
 import TourListPage from './pages/admin/tours/TourListPage'
 
+//import Destination from './pages/admin/destinations/Destination'
+import CreateCustomer from './pages/admin/customers/create_customer'
 function App() {
   return (
     <>
@@ -13,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/destination' element={<Destination />} />
           <Route path='/' element={<CreateTour />} />
+          <Route path='/' element={<CreateCustomer />} />
         </Routes>
       </BrowserRouter>
     </>
