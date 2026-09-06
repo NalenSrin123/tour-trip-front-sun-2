@@ -98,7 +98,7 @@ export default function LoginPage({ onSuccess }) {
   return (
     <div className="flex min-h-screen flex-col bg-[#f8f8ff]">
       <main className="flex flex-1 items-center justify-center px-4 py-10">
-        <div className="mx-auto w-full max-w-[350px]">
+        <div className="mx-auto w-full max-w-87.5">
           <section className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
             <header className="border-b border-slate-200 pb-3 text-center">
               <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white shadow-sm">

@@ -1,5 +1,6 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AdminLayout from './components/layout/AdminLayout'
 import Destination from './pages/admin/destinations/Destination'
 import { RegisterForm } from './pages/auth/RegisterForm'
 import LoginPage from './pages/auth/LoginPage'
@@ -9,6 +10,7 @@ import Destinations from './pages/admin/destinations/destinations'
 import RevenueOverview from './components/tour/RevenueOverview'
 import Sidebar from './components/layout/sidebar'
 import Header from './components/layout/header'
+import PageListUser from './pages/admin/users/page_list_user'
 
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
@@ -30,6 +32,7 @@ function App() {
           <Route path='/header' element={<Header/>}/>
          
           <Route path='/create-user' element={<CreateUsers />} />
+          <Route path='/users' element={<PageListUser />} />
         </Routes>
       </BrowserRouter>
       <div className="flex min-h-screen flex-col">
