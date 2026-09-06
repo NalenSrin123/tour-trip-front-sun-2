@@ -28,7 +28,7 @@ export default function ForgotPassword() {
         />
 
       //   {/* Small center line */}
-      {/* // </div> */} 
+      {/* // </div> */}
       {/* <img
   src={airplaneIcon}
   alt="TravelAdmin"
@@ -47,8 +47,7 @@ export default function ForgotPassword() {
   "
 /> */}
 
-
-        <div className="absolute top-2 left-1/2 h-[2px] w-4 -translate-x-1/2 bg-sky-400" />
+      <div className="absolute top-2 left-1/2 h-[2px] w-4 -translate-x-1/2 bg-sky-400" />
 
       {/* Logo */}
       <div className="flex justify-center pt-1">
@@ -73,9 +72,9 @@ export default function ForgotPassword() {
               strokeLinejoin="round"
             />
           </svg> */}
- <div className="flex items-center justify-center gap-1.5 mb-6">
-        <div
-  className="
+          <div className="flex items-center justify-center gap-1.5 mb-6">
+            <div
+              className="
     w-[20px]
     h-[20px]
     bg-[#4f46e5]
@@ -83,18 +82,16 @@ export default function ForgotPassword() {
     mask-no-repeat
     mask-center
   "
-  style={{
-    maskImage: `url(${airplaneIcon})`,
-    WebkitMaskImage: `url(${airplaneIcon})`,
-  }}
-/>
+              style={{
+                maskImage: `url(${airplaneIcon})`,
+                WebkitMaskImage: `url(${airplaneIcon})`,
+              }}
+            />
 
-          <span className="text-[14px] font-bold text-[#202534]">
-            TravelAdmin
-          </span>
-        </div>
-
-          
+            <span className="text-[14px] font-bold text-[#202534]">
+              TravelAdmin
+            </span>
+          </div>
 
           {/* <span>TravelAdmin</span> */}
         </div>

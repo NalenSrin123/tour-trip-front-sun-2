@@ -15,11 +15,23 @@ import GuidesList from "./pages/admin/guides/GuidesList";
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+import Herosection from './pages/public/Herosection'
+
+const HERO_IMAGES = [
+  'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
+  'https://i.pinimg.com/1200x/bf/49/1c/bf491c2d5cea22db9afaf280cba0466c.jpg',
+  'https://i.pinimg.com/736x/2e/d1/d4/2ed1d4c57b64b38d2e09c346c3e771d7.jpg',
+  'https://i.pinimg.com/1200x/ed/dd/ca/edddca5d0d69b6071e5bb630135f69c5.jpg',
+]
+
+const heroSection = <Herosection images={HERO_IMAGES} />
+
 function App() {
   return (
     <>
       <Routes>
           
+          <Route path='/herosection' element={heroSection}/>
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/listbooking' element={<BookingList/>}/>
