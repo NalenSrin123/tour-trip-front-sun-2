@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import AdminLayout from './components/layout/AdminLayout'
 import Destination from './pages/admin/destinations/Destination'
 import { RegisterForm } from './pages/auth/RegisterForm'
@@ -10,6 +10,7 @@ import Destinations from './pages/admin/destinations/destinations'
 import RevenueOverview from './components/tour/RevenueOverview'
 import Sidebar from './components/layout/sidebar'
 import Header from './components/layout/header'
+import Footer from './components/footer'
 import PageListUser from './pages/admin/users/page_list_user'
 
 //import Destination from './pages/admin/destinations/Destination'
@@ -18,8 +19,7 @@ import CreateUsers from './pages/admin/users/CreateUsers'
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+      <Routes>
           
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/login' element={<LoginPage/>}/>
@@ -33,13 +33,8 @@ function App() {
          
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
-        </Routes>
-      </BrowserRouter>
-      <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1" />
-      <Footer />
-    </div>
+      </Routes>
+    
     </>
   );
 }
