@@ -15,6 +15,7 @@ import GuidesList from "./pages/admin/guides/GuidesList";
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+import Popular_Destinations from './components/tour/Popular_Destinations'
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
           <Route path="/guides" element={<GuidesList />} />
+          <Route path='/popular' element={<Popular_Destinations/>}/>
       </Routes>
     
     </>
