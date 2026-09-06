@@ -12,6 +12,7 @@ import Header from './components/layout/header'
 
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
+import CreateUsers from './pages/admin/users/CreateUsers'
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
           <Route path='/sidebar' element={<Sidebar/>}/>
           <Route path='/header' element={<Header/>}/>
          
+          <Route path='/create-user' element={<CreateUsers />} />
         </Routes>
       </BrowserRouter>
       <div className="flex min-h-screen flex-col">
