@@ -15,6 +15,7 @@ import PageListUser from './pages/admin/users/page_list_user'
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+import HomePage from './pages/public/HomePage'
 function App() {
   return (
     <>
@@ -33,13 +34,10 @@ function App() {
          
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
+
+          <Route path='/home' element={<HomePage />} />
         </Routes>
       </BrowserRouter>
-      <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1" />
-      <Footer />
-    </div>
     </>
   );
 }
