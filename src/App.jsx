@@ -15,6 +15,7 @@ import GuidesList from "./pages/admin/guides/GuidesList";
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+import Tours_detailContent from './components/tour/tours_detailContent/Tours_detailContent'
 function App() {
   return (
     <>
@@ -32,6 +33,8 @@ function App() {
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
           <Route path="/guides" element={<GuidesList />} />
+          <Route path="/detail-content" element={<Tours_detailContent />} />
+          
       </Routes>
     
     </>
