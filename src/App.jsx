@@ -25,6 +25,8 @@ const HERO_IMAGES = [
 ]
 
 const heroSection = <Herosection images={HERO_IMAGES} />
+import FeaturedTourPackages from './pages/public/Tour_packages'
+
 
 function App() {
   return (
@@ -40,10 +42,11 @@ function App() {
           <Route path='/table_destinations' element={<Destinations/>}/>
           <Route path='/overview' element={<RevenueOverview/>}/>
           <Route path='/sidebar' element={<Sidebar/>}/>
-         
+          <Route path='/createcustomer' element={<CreateCustomer/>}/>
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
           <Route path="/guides" element={<GuidesList />} />
+          <Route path="/tourpackages" element={<FeaturedTourPackages />} />
       </Routes>
     
     </>
