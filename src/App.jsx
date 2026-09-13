@@ -10,11 +10,12 @@ import Destinations from './pages/admin/destinations/destinations'
 import RevenueOverview from './components/tour/RevenueOverview'
 import Sidebar from './components/layout/sidebar'
 import PageListUser from './pages/admin/users/page_list_user'
-import GuidesList from "./pages/admin/guides/GuidesList";
-
+import GuidesList from "./pages/admin/guides/GuidesList"
 //import Destination from './pages/admin/destinations/Destination'
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+//Tour Menu
+import TourLight from './pages/public/tour/TourLight'
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
           <Route path="/guides" element={<GuidesList />} />
+          <Route path ="/Tourlight" element={<TourLight/>}/>
       </Routes>
     
     </>
