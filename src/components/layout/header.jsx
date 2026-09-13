@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [activeItem, setActiveItem] = useState("DashBoard");
+  const navigate = useNavigate();
 
   const menuItems = [
     "DashBoard",
     "Manage Master",
+    "Destinations",
     "Guides",
     "Tours",
     "Bookings",
@@ -36,7 +39,20 @@ const Header = () => {
               <button
                 key={item}
                 type="button"
-                onClick={() => setActiveItem(item)}
+                onClick={() => {
+                  setActiveItem(item);
+                  if (item === "Bookings") {
+                    navigate("/bookings");
+                  } else if (item === "Destinations") {
+                    navigate("/destinations");
+                  } else if (item === "Guides") {
+                    navigate("/guides");
+                  } else if (item === "Customers") {
+                    navigate("/customers");
+                  } else if (item === "DashBoard") {
+                    navigate("/dashboard");
+                  }
+                }}
                 className={[
                   "flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-medium transition",
                   isActive
@@ -104,6 +120,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+        <Outlet />
       </main>
     </div>
   );
