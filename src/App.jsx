@@ -28,6 +28,7 @@ const heroSection = <Herosection images={HERO_IMAGES} />
 import FeaturedTourPackages from './pages/public/Tour_packages'
 
 
+import HomePage from './pages/public/HomePage'
 function App() {
   return (
     <>
@@ -47,6 +48,7 @@ function App() {
           <Route path='/users' element={<PageListUser />} />
           <Route path="/guides" element={<GuidesList />} />
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
+          <Route path='/home' element={<HomePage />} />
       </Routes>
     
     </>
