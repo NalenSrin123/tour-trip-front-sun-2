@@ -1,30 +1,35 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+
+const menuPaths = {
+  DashBoard: ["/dashboard", "/sidebar"],
+  Destinations: ["/", "/destination", "/destinations", "/table_destinations"],
+  Guides: ["/guides"],
+  Bookings: ["/bookings", "/listbooking"],
+  Customers: ["/customers", "/customer", "/createcustomer"],
+};
 
 const Sidebar = () => {
+  const [activeItem, setActiveItem] = useState("DashBoard");
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const [activeItem, setActiveItem] = useState("List Users");
 
   const menuItems = [
-    { label: "Dashboard", path: "/" },
-    { label: "List Users", path: "/users" },
-    { label: "Manage Master", path: "" },
-    { label: "Guides", path: "" },
-    { label: "Tours", path: "" },
-    { label: "Bookings", path: "" },
-    { label: "Customers", path: "" },
-    { label: "Reviews", path: "" },
-    { label: "Reports", path: "" },
-    { label: "Settings", path: "" },
+    "DashBoard",
+    "Manage Master",
+    "Destinations",
+    "Guides",
+    "Tours",
+    "Bookings",
+    "Customers",
+    "Reviews",
+    "Reports",
+    "Settings",
   ];
-
-  const isActive = (item) =>
-    item.path ? pathname === item.path : activeItem === item.label;
 
   return (
     <div className="flex min-h-screen bg-slate-100">
-      <aside className="w-64 bg-[#312E81] p-5 text-slate-100 shadow-lg">
+      <aside className="w-64 shrink-0 bg-[#312E81] p-5 text-slate-100 shadow-lg">
         <div className="mb-8 flex items-center gap-3 px-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 font-bold text-white">
             T
@@ -37,13 +42,20 @@ const Sidebar = () => {
 
         <nav className="space-y-2">
           {menuItems.map((item) => {
-            const isActive = activeItem === item;
+            const isActive = menuPaths[item]
+              ? menuPaths[item].includes(pathname)
+              : !Object.values(menuPaths).some((paths) => paths.includes(pathname)) && activeItem === item;
 
             return (
               <button
                 key={item}
                 type="button"
-                onClick={() => setActiveItem(item)}
+                onClick={() => {
+                  setActiveItem(item);
+                  if (menuPaths[item]) {
+                    navigate(item === "Destinations" ? "/destinations" : menuPaths[item][0]);
+                  }
+                }}
                 className={[
                   "flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-medium transition",
                   isActive
@@ -68,7 +80,7 @@ const Sidebar = () => {
         </div>
       </aside>
 
-      <div className="flex-1">
+      <div className="min-w-0 flex-1">
         <header className="border-b border-slate-200 bg-white px-6 py-[18px] shadow-sm shadow-slate-200/50">
           <div className="flex items-center justify-between gap-4">
             <div className="flex w-[650px] max-w-[650px] flex-1 items-center rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 shadow-sm shadow-slate-200/50">
@@ -111,13 +123,7 @@ const Sidebar = () => {
             </div>
           </div>
         </header>
-
-        <main className="p-6">
-          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-            <h2 className="text-2xl font-bold text-slate-800">Dashboard</h2>
-            <p className="mt-2 text-sm text-slate-500">Welcome back, Admin.</p>
-          </div>
-        </main>
+        <Outlet />
       </div>
     </div>
   );
