@@ -29,6 +29,7 @@ import FeaturedTourPackages from './pages/public/Tour_packages'
 
 
 import HomePage from './pages/public/HomePage'
+import Tours_detailContent from './components/tour/tours_detailContent/Tours_detailContent'
 function App() {
   return (
     <>
@@ -49,6 +50,8 @@ function App() {
           <Route path="/guides" element={<GuidesList />} />
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
           <Route path='/home' element={<HomePage />} />
+          <Route path="/detail-content" element={<Tours_detailContent />} />
+          
       </Routes>
     
     </>
