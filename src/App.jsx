@@ -30,11 +30,14 @@ import FeaturedTourPackages from './pages/public/Tour_packages'
 import HomePage from './pages/public/HomePage'
 import Tours_detailContent from './components/tour/tours_detailContent/Tours_detailContent'
 import Popular_Destinations from './components/tour/Popular_Destinations'
+import Top_attractions from './pages/public/Top_attractions'
+import { Available_tours } from './pages/public/Available_tours'
 function App() {
   return (
     <>
       <Routes>
-          
+          <Route path='/available_tours' element={<Available_tours/>}/>
+          <Route path='/top_attraction' element={<Top_attractions/>}/>
           <Route path='/herosection' element={heroSection}/>
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/login' element={<LoginPage/>}/>
