@@ -14,6 +14,7 @@ import DashboardOverview from "./pages/admin/dashboard/dashboardOverview";
 
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+import DestinationDetail from './pages/public/DestinationDetail'
 import Herosection from './pages/public/Herosection'
 
 const HERO_IMAGES = [
@@ -41,24 +42,25 @@ function App() {
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
           <Route path='/home' element={<HomePage />} />
           <Route path="/detail-content" element={<Tours_detailContent />} />
-          <Route element={<Sidebar />}>
-          <Route path='/listbooking' element={<BookingList/>}/>
-          <Route path='/customer' element={<Customers/>}/>
-          <Route path='/destination' element={<Destination/>}/>
-          <Route path='/table_destinations' element={<Destinations/>}/>
-          <Route path='/overview' element={<RevenueOverview/>}/>
-          <Route path='/sidebar' element={<DashboardOverview/>}/>
-          <Route path='/createcustomer' element={<CreateCustomer/>}/>
-          <Route path='/create-user' element={<CreateUsers />} />
-          <Route path='/users' element={<PageListUser />} />
-          <Route path="/guides" element={<GuidesList />} />
-           <Route path="/" element={<Destination />} />
-            <Route path="/destinations" element={<Destinations />} />
-            <Route path="/bookings" element={<BookingList />} />
-            <Route path="/customers" element={<Customers />} />
-            <Route path="/dashboard" element={<DashboardOverview />} />
-             <Route path='/popular' element={<Popular_Destinations/>}/>
-          </Route>
+            <Route element={<Sidebar />}>
+           <Route path='/listbooking' element={<BookingList/>}/>
+           <Route path='/customer' element={<Customers/>}/>
+           <Route path='/destination' element={<Destination/>}/>
+           <Route path='/table_destinations' element={<Destinations/>}/>
+           <Route path='/overview' element={<RevenueOverview/>}/>
+           <Route path='/sidebar' element={<DashboardOverview/>}/>
+           <Route path='/createcustomer' element={<CreateCustomer/>}/>
+           <Route path='/create-user' element={<CreateUsers />} />
+           <Route path='/users' element={<PageListUser />} />
+           <Route path="/guides" element={<GuidesList />} />
+            <Route path="/" element={<Destination />} />
+             <Route path="" element={<Destinations />} />
+             <Route path="/destinations/mondulkiri" element={<DestinationDetail />} />
+             <Route path="/bookings" element={<BookingList />} />
+             <Route path="/customers" element={<Customers />} />
+             <Route path="/dashboard" element={<DashboardOverview />} />
+              <Route path='/popular' element={<Popular_Destinations/>}/>
+           </Route>
           
       </Routes>
     
