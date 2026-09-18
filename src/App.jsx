@@ -15,6 +15,7 @@ import DashboardOverview from "./pages/admin/dashboard/dashboardOverview";
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
 import Herosection from './pages/public/Herosection'
+import TravelSection  from './pages/public/Practical_section'
 
 const HERO_IMAGES = [
   'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
@@ -35,6 +36,7 @@ function App() {
       <Routes>
           
           <Route path='/herosection' element={heroSection}/>
+          <Route path="/practical_section" element={<TravelSection />} />
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
@@ -56,6 +58,7 @@ function App() {
             <Route path="/bookings" element={<BookingList />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="/dashboard" element={<DashboardOverview />} />
+            
           </Route>
           
       </Routes>
