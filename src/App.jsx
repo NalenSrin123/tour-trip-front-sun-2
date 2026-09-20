@@ -14,6 +14,7 @@ import DashboardOverview from "./pages/admin/dashboard/dashboardOverview";
 
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
+import DestinationDetail from './pages/public/DestinationDetail'
 import Herosection from './pages/public/Herosection'
 import TourLight from './pages/public/tour/TourLight'
 import AuthenticKhmer from './components/tour/hero_section/AuthenticKhmer'
@@ -67,6 +68,7 @@ function App() {
              <Route path='/popular' element={<Popular_Destinations/>}/>
              <Route path ="/tour-light" element={<TourLight/>}/>
              <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
+             <Route path="/destinations/mondulkiri" element={<DestinationDetail />} />
           </Route>
           
       </Routes>
