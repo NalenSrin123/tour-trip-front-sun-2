@@ -17,6 +17,7 @@ import CreateUsers from './pages/admin/users/CreateUsers'
 import Herosection from './pages/public/Herosection'
 import TourLight from './pages/public/tour/TourLight'
 import AuthenticKhmer from './components/tour/hero_section/AuthenticKhmer'
+import TravelSection  from './pages/public/Practical_section'
 
 const HERO_IMAGES = [
   'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
@@ -41,6 +42,7 @@ function App() {
           <Route path='/available_tours' element={<Available_tours/>}/>
           <Route path='/top_attraction' element={<Top_attractions/>}/>
           <Route path='/herosection' element={heroSection}/>
+          <Route path="/practical_section" element={<TravelSection />} />
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
