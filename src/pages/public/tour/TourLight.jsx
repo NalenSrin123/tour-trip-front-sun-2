@@ -47,7 +47,7 @@ const TourLight = () => {
   return (
     <>
       <h1 className="text-4xl text-gray-800 p-4 font-bold">Tour Hightlights</h1>
-      <div className="grid grid-cols-3 gap-4 p-4">
+      <div className="grid sm:grid-cols-3 grid-cols-2 gap-4 p-4">
         {cards.map((card) => (
           <HighLighCompo
             key={card.id}

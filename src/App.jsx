@@ -38,6 +38,7 @@ import Popular_Destinations from './components/tour/Popular_Destinations'
 import Top_attractions from './pages/public/Top_attractions'
 import { Available_tours } from './pages/public/Available_tours'
 import HeroSectionAbout from './pages/public/HeroSectionAbout'  
+import Tour from './routes/Tour'
 function App() {
   return (
     <>
@@ -75,6 +76,7 @@ function App() {
              <Route path="/experience_detail" element={<ExperienceDetail />} />
           </Route>
           <Route path='/about' element={<HeroSectionAbout/>}/>
+          <Route path='/tour' element={<Tour/>}/>
 
           
       </Routes>

@@ -13,15 +13,20 @@ const navLinks = [
 const Header = () => {
   return (
     <header className="w-full border-b border-slate-200 bg-white">
-      <div className="mx-auto flex min-h-[54px] max-w-[1040px] items-center justify-between gap-6 px-6 py-2.5">
+      <div className="mx-auto flex min-h-[54px] max-w-[1700px] items-center justify-between gap-6 px-6 py-2.5">
         <Link to="/" className="flex shrink-0 items-center gap-2">
           <span className="flex h-6 w-6 items-center justify-center rounded-[5px] bg-[#10ad91] text-white">
             <FiArrowUpRight size={15} strokeWidth={2.5} />
           </span>
-          <span className="text-[16px] font-bold tracking-[-0.02em] text-[#182849]">TripGo</span>
+          <span className="text-[16px] font-bold tracking-[-0.02em] text-[#182849]">
+            TripGo
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
+        <nav
+          className="hidden items-center gap-8 md:flex"
+          aria-label="Primary navigation"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.label}

@@ -3,9 +3,9 @@ import React from 'react'
 const Tours_detailContent = () => {
   return (
     <>
-        <div className='w-full flex gap-4 p-[20px]'>
+        <div className='w-full md:flex block gap-4 p-[20px]'>
             {/* =========>>  section <<======= */}
-            <div className="section w-[60%] flex flex-col gap-4">
+            <div className="section  flex flex-col gap-4">
                 {/* title section-content */}
                 <div className="">
                     <h1 className='text-[24px] font-bold'>Angkor Wat Discovery Tour</h1>
@@ -50,7 +50,7 @@ const Tours_detailContent = () => {
                     </article>
                 </div>
                 {/* statuse time */}
-                <div className="flex justify-between  p-[20px] bg-pink-100">
+                <div className="flex justify-between  p-[20px]  bg-pink-100 rounded-lg">
                     <article className='flex items-center gap-2'>
                         <div className="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center">
                             <span>
@@ -107,7 +107,7 @@ const Tours_detailContent = () => {
 
 
             {/* =========>>  detail <<======= */}
-            <div className='details w-[40%] shadow-md bg-white p-[20px] rounded-md flex flex-col gap-4'>
+            <div className='details mt-10 sm:mt-0 shadow-md bg-white p-[20px] rounded-md flex flex-col gap-4'>
                 {/* price check  */}
                 <div className="">
                     <article>

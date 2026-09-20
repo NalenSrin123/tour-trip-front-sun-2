@@ -10,7 +10,7 @@ const photos = {
 
 function TourGallery() {
   return (
-    <section className="mx-auto max-w-[1200px] mb-8">
+    <section className="mx-auto px-6 mb-8">
       {/* Breadcrumb */}
       <div className="m-8 flex items-center gap-3 text-[16px]">
         <span className="text-slate-600">Home</span>
