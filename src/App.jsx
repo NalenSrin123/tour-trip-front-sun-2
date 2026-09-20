@@ -65,6 +65,7 @@ function App() {
           <Route path="/guides" element={<GuidesList />} />
            <Route path="/" element={<Destination />} />
             <Route path="/destinations" element={<Destinations />} />
+            <Route path="/add_destinations" element={<Destination />} />
             <Route path="/bookings" element={<BookingList />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="/dashboard" element={<DashboardOverview />} />

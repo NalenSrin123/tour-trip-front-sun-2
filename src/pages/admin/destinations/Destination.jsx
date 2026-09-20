@@ -5,6 +5,7 @@ import {
      faChevronDown,
      faXmark,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 function Destination() {
 
@@ -65,12 +66,14 @@ function Destination() {
                               </div>
 
                               <div className="flex items-center gap-2">
-                                   <button
+                                   <Link to="/destinations">
+                                        <button
                                         type="button"
-                                        className="rounded border border-gray-300 bg-transparent px-4 py-1.5 text-[11px] font-semibold text-gray-600 hover:bg-gray-100"
+                                        className="rounded border cursor-pointer border-gray-300 bg-transparent px-4 py-1.5 text-[11px] font-semibold text-gray-600 hover:bg-gray-100"
                                    >
                                         Cancel
                                    </button>
+                                   </Link>
 
                                    <button
                                         type="button"
