@@ -16,6 +16,8 @@ import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
 import Herosection from './pages/public/Herosection'
 import TourLight from './pages/public/tour/TourLight'
+import AuthenticKhmer from './components/tour/hero_section/AuthenticKhmer'
+
 const HERO_IMAGES = [
   'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
   'https://i.pinimg.com/1200x/bf/49/1c/bf491c2d5cea22db9afaf280cba0466c.jpg',
@@ -62,10 +64,11 @@ function App() {
             <Route path="/dashboard" element={<DashboardOverview />} />
              <Route path='/popular' element={<Popular_Destinations/>}/>
              <Route path ="/tour-light" element={<TourLight/>}/>
+             <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
           </Route>
           
       </Routes>
-    
+
     </>
   );
 }
