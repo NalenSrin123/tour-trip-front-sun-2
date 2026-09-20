@@ -1,9 +1,9 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/header";
+import Sidebar from "./components/layout/sidebar";
+import RevenueOverview from "./components/tour/RevenueOverview";
 import Destination from "./pages/admin/destinations/Destination";
 import Destinations from "./pages/admin/destinations/destinations";
-import GuildList from "./pages/admin/guides/GuidesList";
 import BookingList from "./components/booking/BookingList";
 import Customers from "./components/admin/customers/Customers";
 import DashboardOverview from "./pages/admin/dashboard/dashboardOverview";
@@ -16,6 +16,10 @@ import Herosection from './pages/public/Herosection'
 import TourLight from './pages/public/tour/TourLight'
 import AuthenticKhmer from './components/tour/hero_section/AuthenticKhmer'
 import TravelSection  from './pages/public/Practical_section'
+import { RegisterForm } from './pages/auth/RegisterForm'
+import LoginPage from './pages/auth/LoginPage'
+import PageListUser from './pages/admin/users/page_list_user'
+import GuidesList from './pages/admin/guides/GuidesList'
 
 const HERO_IMAGES = [
   'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
