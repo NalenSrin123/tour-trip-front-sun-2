@@ -36,6 +36,7 @@ import Tours_detailContent from './components/tour/tours_detailContent/Tours_det
 import Popular_Destinations from './components/tour/Popular_Destinations'
 import Top_attractions from './pages/public/Top_attractions'
 import { Available_tours } from './pages/public/Available_tours'
+import HeroSectionAbout from './pages/public/HeroSectionAbout'  
 function App() {
   return (
     <>
@@ -70,6 +71,8 @@ function App() {
              <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
              <Route path="/destinations/mondulkiri" element={<DestinationDetail />} />
           </Route>
+          <Route path='/about' element={<HeroSectionAbout/>}/>
+
           
       </Routes>
 
