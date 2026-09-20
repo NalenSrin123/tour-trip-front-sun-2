@@ -15,13 +15,17 @@ const CreateUsers = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const handleSubmit = () =>{
+    <Testing/>
+  }
   return (
     <div className="w-full">
       <div className="bg-white rounded-lg border border-black shadow p-6">
         <h1 className="text-3xl font-bold mb-6">Create User</h1>
         <hr className="border-2 border-black mb-3" />
 
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleSubmit}>
           <div>
             <label className="block mb-2 font-medium">Name</label>
             <input
