@@ -30,6 +30,7 @@ import FeaturedTourPackages from './pages/public/Tour_packages'
 import HomePage from './pages/public/HomePage'
 import Tours_detailContent from './components/tour/tours_detailContent/Tours_detailContent'
 import Popular_Destinations from './components/tour/Popular_Destinations'
+import HeroSectionAbout from './pages/public/HeroSectionAbout'  
 function App() {
   return (
     <>
@@ -59,6 +60,8 @@ function App() {
             <Route path="/dashboard" element={<DashboardOverview />} />
              <Route path='/popular' element={<Popular_Destinations/>}/>
           </Route>
+          <Route path='/about' element={<HeroSectionAbout/>}/>
+
           
       </Routes>
     
