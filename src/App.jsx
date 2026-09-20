@@ -1,16 +1,13 @@
-import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import Destination from './pages/admin/destinations/Destination'
-import { RegisterForm } from './pages/auth/RegisterForm'
-import LoginPage from './pages/auth/LoginPage'
-import BookingList from './components/booking/BookingList'
-import Customers from './components/admin/customers/Customers'
-import Destinations from './pages/admin/destinations/destinations'
-import RevenueOverview from './components/tour/RevenueOverview'
-import Sidebar from './components/layout/sidebar'
-import PageListUser from './pages/admin/users/page_list_user'
-import GuidesList from "./pages/admin/guides/GuidesList";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/header";
+import Destination from "./pages/admin/destinations/Destination";
+import Destinations from "./pages/admin/destinations/destinations";
+import GuildList from "./pages/admin/guides/GuidesList";
+import BookingList from "./components/booking/BookingList";
+import Customers from "./components/admin/customers/Customers";
 import DashboardOverview from "./pages/admin/dashboard/dashboardOverview";
+import ExperienceDetail from "./pages/public/experience_detail";
 
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
@@ -40,6 +37,7 @@ import HeroSectionAbout from './pages/public/HeroSectionAbout'
 function App() {
   return (
     <>
+      {/* <Header /> */}
       <Routes>
           <Route path='/available_tours' element={<Available_tours/>}/>
           <Route path='/top_attraction' element={<Top_attractions/>}/>
@@ -70,6 +68,7 @@ function App() {
              <Route path ="/tour-light" element={<TourLight/>}/>
              <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
              <Route path="/destinations/mondulkiri" element={<DestinationDetail />} />
+             <Route path="/experience_detail" element={<ExperienceDetail />} />
           </Route>
           <Route path='/about' element={<HeroSectionAbout/>}/>
 
