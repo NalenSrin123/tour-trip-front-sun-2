@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import TourHeader from "../../../components/admin/tours/TourHeader";
 import TourTable from "../../../components/admin/tours/TourTable";
 import Pagination from "../../../components/admin/tours/Pagination";
@@ -77,6 +78,7 @@ const tours = [
 ];
 
 const TourListPage = () => {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("ALL");
   const [status, setStatus] = useState("ALL");
@@ -97,7 +99,7 @@ const TourListPage = () => {
   });
 
   const handleAdd = () => {
-    alert("Add Tour");
+    navigate("/admin/tours/create");
   };
 
   const handleView = (tour) => {

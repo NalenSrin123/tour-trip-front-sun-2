@@ -5,6 +5,7 @@ const menuPaths = {
   DashBoard: ["/dashboard", "/sidebar"],
   Destinations: ["/", "/destination", "/destinations", "/table_destinations"],
   Guides: ["/guides"],
+  Tours: ["/admin/tours", "/admin/tours/create", "/tourlist"],
   Bookings: ["/bookings", "/listbooking"],
   Customers: ["/customers", "/customer", "/createcustomer"],
 };
@@ -44,7 +45,9 @@ const Sidebar = () => {
           {menuItems.map((item) => {
             const isActive = menuPaths[item]
               ? menuPaths[item].includes(pathname)
-              : !Object.values(menuPaths).some((paths) => paths.includes(pathname)) && activeItem === item;
+              : !Object.values(menuPaths).some((paths) =>
+                  paths.includes(pathname),
+                ) && activeItem === item;
 
             return (
               <button
@@ -53,7 +56,11 @@ const Sidebar = () => {
                 onClick={() => {
                   setActiveItem(item);
                   if (menuPaths[item]) {
-                    navigate(item === "Destinations" ? "/destinations" : menuPaths[item][0]);
+                    navigate(
+                      item === "Destinations"
+                        ? "/destinations"
+                        : menuPaths[item][0],
+                    );
                   }
                 }}
                 className={[
