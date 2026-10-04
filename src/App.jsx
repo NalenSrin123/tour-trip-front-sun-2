@@ -66,6 +66,8 @@ function App() {
           <Route path="/guides" element={<GuidesList />} />
           <Route path="/admin/tours" element={<TourListPage />} />
           <Route path="/admin/tours/create" element={<CreateTour />} />
+          <Route path="/tours" element={<TourListPage />} />
+          <Route path="/tours/create" element={<CreateTour />} />
           <Route path="/tourlist" element={<TourListPage />} />
           <Route path="/" element={<Destination />} />
           <Route path="/destinations" element={<Destinations />} />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import TourHeader from "../../../components/admin/tours/TourHeader";
 import TourTable from "../../../components/admin/tours/TourTable";
 import Pagination from "../../../components/admin/tours/Pagination";
@@ -79,6 +79,10 @@ const tours = [
 
 const TourListPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [successMessage, setSuccessMessage] = useState(
+    location.state?.successMessage ?? "",
+  );
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("ALL");
   const [status, setStatus] = useState("ALL");
@@ -99,7 +103,7 @@ const TourListPage = () => {
   });
 
   const handleAdd = () => {
-    navigate("/admin/tours/create");
+    navigate("/tours/create");
   };
 
   const handleView = (tour) => {
@@ -125,6 +129,22 @@ const TourListPage = () => {
         {/* HEADER */}
 
         <TourHeader onAdd={handleAdd} />
+
+        {successMessage && (
+          <div
+            role="status"
+            className="mt-5 flex items-center justify-between gap-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800"
+          >
+            <span>{successMessage}</span>
+            <button
+              type="button"
+              onClick={() => setSuccessMessage("")}
+              className="font-medium text-emerald-900 underline underline-offset-2"
+            >
+              Dismiss
+            </button>
+          </div>
+        )}
 
         {/* MAIN CARD */}
 

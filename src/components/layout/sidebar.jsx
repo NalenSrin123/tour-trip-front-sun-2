@@ -5,7 +5,7 @@ const menuPaths = {
   DashBoard: ["/dashboard", "/sidebar"],
   Destinations: ["/", "/destination", "/destinations", "/table_destinations"],
   Guides: ["/guides"],
-  Tours: ["/admin/tours", "/admin/tours/create", "/tourlist"],
+  Tours: ["/admin/tours", "/tourlist", "/"],
   Bookings: ["/bookings", "/listbooking"],
   Customers: ["/customers", "/customer", "/createcustomer"],
 };
