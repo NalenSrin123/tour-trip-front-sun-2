@@ -7,6 +7,7 @@ const menuPaths = {
   Guides: ["/guides"],
   Bookings: ["/bookings", "/listbooking"],
   Customers: ["/customers", "/customer", "/createcustomer"],
+  Settings: ["/settings"],
 };
 
 const Sidebar = () => {

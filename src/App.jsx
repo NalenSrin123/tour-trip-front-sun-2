@@ -1,6 +1,7 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "./components/layout/sidebar";
+import RequireAuth from "./components/layout/RequireAuth";
 import RevenueOverview from "./components/tour/RevenueOverview";
 import Destination from "./pages/admin/destinations/Destination";
 import Destinations from "./pages/admin/destinations/destinations";
@@ -20,6 +21,7 @@ import { RegisterForm } from './pages/auth/RegisterForm'
 import LoginPage from './pages/auth/LoginPage'
 import PageListUser from './pages/admin/users/page_list_user'
 import GuidesList from './pages/admin/guides/GuidesList'
+import SettingsPage from './pages/admin/settings/SettingsPage'
 
 const HERO_IMAGES = [
   'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
@@ -39,6 +41,10 @@ import Top_attractions from './pages/public/Top_attractions'
 import { Available_tours } from './pages/public/Available_tours'
 import HeroSectionAbout from './pages/public/HeroSectionAbout'  
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const redirectAfterLogin = location.state?.from ?? "/dashboard";
+
   return (
     <>
       {/* <Header /> */}
@@ -48,10 +54,11 @@ function App() {
           <Route path='/herosection' element={heroSection}/>
           <Route path="/practical_section" element={<TravelSection />} />
           <Route path='/register' element={<RegisterForm/>}/>
-          <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/login' element={<LoginPage onSuccess={() => navigate(redirectAfterLogin, { replace: true })}/>}/>
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
           <Route path='/home' element={<HomePage />} />
           <Route path="/detail-content" element={<Tours_detailContent />} />
+          <Route element={<RequireAuth />}>
           <Route element={<Sidebar />}>
           <Route path='/listbooking' element={<BookingList/>}/>
           <Route path='/customer' element={<Customers/>}/>
@@ -62,6 +69,7 @@ function App() {
           <Route path='/createcustomer' element={<CreateCustomer/>}/>
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
+          <Route path='/settings' element={<SettingsPage />} />
           <Route path="/guides" element={<GuidesList />} />
            <Route path="/" element={<Destination />} />
             <Route path="/destinations" element={<Destinations />} />
@@ -73,6 +81,7 @@ function App() {
              <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
              <Route path="/destinations/mondulkiri" element={<DestinationDetail />} />
              <Route path="/experience_detail" element={<ExperienceDetail />} />
+          </Route>
           </Route>
           <Route path='/about' element={<HeroSectionAbout/>}/>
 
