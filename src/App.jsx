@@ -1,122 +1,86 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Sidebar from "./components/layout/sidebar";
+import RevenueOverview from "./components/tour/RevenueOverview";
+import Destination from "./pages/admin/destinations/Destination";
+import Destinations from "./pages/admin/destinations/destinations";
+import BookingList from "./components/booking/BookingList";
+import Customers from "./components/admin/customers/Customers";
+import DashboardOverview from "./pages/admin/dashboard/dashboardOverview";
+import ExperienceDetail from "./pages/public/experience_detail";
 
+import CreateCustomer from './pages/admin/customers/create_customer'
+import CreateUsers from './pages/admin/users/CreateUsers'
+import DestinationDetail from './pages/public/DestinationDetail'
+import Herosection from './pages/public/Herosection'
+import TourLight from './pages/public/tour/TourLight'
+import AuthenticKhmer from './components/tour/hero_section/AuthenticKhmer'
+import TravelSection  from './pages/public/Practical_section'
+import { RegisterForm } from './pages/auth/RegisterForm'
+import LoginPage from './pages/auth/LoginPage'
+import PageListUser from './pages/admin/users/page_list_user'
+import GuidesList from './pages/admin/guides/GuidesList'
+
+const HERO_IMAGES = [
+  'https://i.pinimg.com/1200x/ed/bf/73/edbf7353393cc3d039792dc89a0dd4b6.jpg',
+  'https://i.pinimg.com/1200x/bf/49/1c/bf491c2d5cea22db9afaf280cba0466c.jpg',
+  'https://i.pinimg.com/736x/2e/d1/d4/2ed1d4c57b64b38d2e09c346c3e771d7.jpg',
+  'https://i.pinimg.com/1200x/ed/dd/ca/edddca5d0d69b6071e5bb630135f69c5.jpg',
+]
+
+const heroSection = <Herosection images={HERO_IMAGES} />
+import FeaturedTourPackages from './pages/public/Tour_packages'
+
+
+import HomePage from './pages/public/HomePage'
+import Tours_detailContent from './components/tour/tours_detailContent/Tours_detailContent'
+import Popular_Destinations from './components/tour/Popular_Destinations'
+import Top_attractions from './pages/public/Top_attractions'
+import { Available_tours } from './pages/public/Available_tours'
+import HeroSectionAbout from './pages/public/HeroSectionAbout'  
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      {/* <Header /> */}
+      <Routes>
+          <Route path='/available_tours' element={<Available_tours/>}/>
+          <Route path='/top_attraction' element={<Top_attractions/>}/>
+          <Route path='/herosection' element={heroSection}/>
+          <Route path="/practical_section" element={<TravelSection />} />
+          <Route path='/register' element={<RegisterForm/>}/>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path="/tourpackages" element={<FeaturedTourPackages />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path="/detail-content" element={<Tours_detailContent />} />
+          <Route element={<Sidebar />}>
+          <Route path='/listbooking' element={<BookingList/>}/>
+          <Route path='/customer' element={<Customers/>}/>
+          <Route path='/destination' element={<Destination/>}/>
+          <Route path='/table_destinations' element={<Destinations/>}/>
+          <Route path='/overview' element={<RevenueOverview/>}/>
+          <Route path='/sidebar' element={<DashboardOverview/>}/>
+          <Route path='/createcustomer' element={<CreateCustomer/>}/>
+          <Route path='/create-user' element={<CreateUsers />} />
+          <Route path='/users' element={<PageListUser />} />
+          <Route path="/guides" element={<GuidesList />} />
+           <Route path="/" element={<Destination />} />
+            <Route path="/destinations" element={<Destinations />} />
+            <Route path="/bookings" element={<BookingList />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/dashboard" element={<DashboardOverview />} />
+             <Route path='/popular' element={<Popular_Destinations/>}/>
+             <Route path ="/tour-light" element={<TourLight/>}/>
+             <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
+             <Route path="/destinations/mondulkiri" element={<DestinationDetail />} />
+             <Route path="/experience_detail" element={<ExperienceDetail />} />
+          </Route>
+          <Route path='/about' element={<HeroSectionAbout/>}/>
 
-      <div className="ticks"></div>
+          
+      </Routes>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
