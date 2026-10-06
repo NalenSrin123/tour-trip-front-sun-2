@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { logout } from "../../services/authService";
 
 const menuPaths = {
   DashBoard: ["/dashboard", "/sidebar"],
@@ -30,18 +33,18 @@ const Sidebar = () => {
 
   return (
     <div className="flex min-h-screen bg-slate-100">
-      <aside className="w-64 shrink-0 bg-[#312E81] p-5 text-slate-100 shadow-lg">
+      <aside className="sticky top-0 flex h-screen w-64 shrink-0 flex-col overflow-y-auto bg-[#312E81] p-5 text-slate-100 shadow-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <div className="mb-8 flex items-center gap-3 px-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 font-bold text-white">
             T
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-wide">Travel Admin</h1>
-            <div className="text-sm text-slate-400">Management System</div>
+            <h1 className="text-lg font-semibold tracking-wide">Travel Admin</h1>
+            <div className="text-xs text-slate-400">Management System</div>
           </div>
         </div>
 
-        <nav className="space-y-2">
+        <nav className="flex-1 space-y-2 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {menuItems.map((item) => {
             const isActive = menuPaths[item]
               ? menuPaths[item].includes(pathname)
@@ -73,9 +76,15 @@ const Sidebar = () => {
           })}
         </nav>
 
-        <div>
-          <button className="mt-80 flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-500">
-            <span aria-label="logout icon">⏻</span>
+        <div className="mt-auto pt-5">
+          <button
+            onClick={() => {
+              logout();
+              navigate("/login", { replace: true });
+            }}
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-500"
+          >
+            <FontAwesomeIcon icon={faArrowRightFromBracket} />
             <span>Log out</span>
           </button>
         </div>
