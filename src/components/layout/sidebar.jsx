@@ -38,8 +38,8 @@ const Sidebar = () => {
             T
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-wide">Travel Admin</h1>
-            <div className="text-sm text-slate-400">Management System</div>
+            <h1 className="text-lg font-semibold tracking-wide">Travel Admin</h1>
+            <div className="text-xs text-slate-400">Management System</div>
           </div>
         </div>
 
