@@ -1,37 +1,43 @@
 import { ChevronDown, Search } from "lucide-react";
 
-function FilterButton({ children }) {
+function FilterSelect({ label, options }) {
   return (
-    <button
-      type="button"
-      className="flex h-12 items-center justify-between gap-4 rounded-lg border border-slate-300 bg-white px-5 text-base text-slate-800 transition hover:bg-slate-50"
-    >
-      {children}
-      <ChevronDown size={19} className="text-slate-500" />
-    </button>
+    <label className="relative flex h-10 items-center rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-600">
+      <span className="mr-2 text-xs font-semibold uppercase text-slate-400">
+        {label}:
+      </span>
+      <select className="appearance-none bg-transparent pr-6 text-sm text-slate-700 outline-none">
+        {options.map((option) => (
+          <option key={option}>{option}</option>
+        ))}
+      </select>
+      <ChevronDown
+        size={14}
+        className="pointer-events-none absolute right-3 text-slate-400"
+      />
+    </label>
   );
 }
 
 export default function CustomerFilters() {
   return (
-    <div className="flex flex-col gap-4 p-6 lg:flex-row lg:items-center lg:justify-between">
-      <div className="relative w-full lg:max-w-[510px]">
+    <div className="flex flex-col gap-3 border-b border-slate-100 p-4 lg:flex-row lg:items-center">
+      <div className="relative w-full lg:max-w-[420px]">
         <Search
-          size={25}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
+          size={16}
+          className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
         />
-
         <input
           type="text"
-          placeholder="Search customers by name or email..."
-          className="h-14 w-full rounded-lg border border-slate-300 bg-white pl-14 pr-4 text-base text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          placeholder="Search customers by name, email, or phone..."
+          className="h-10 w-full rounded-lg border border-slate-200 bg-slate-50 pl-10 pr-4 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-300 focus:bg-white focus:ring-4 focus:ring-blue-50"
         />
       </div>
 
-      <div className="flex flex-wrap gap-4">
-        <FilterButton>Status: All</FilterButton>
-        <FilterButton>Country: All</FilterButton>
-        <FilterButton>Sort: Newest</FilterButton>
+      <div className="flex flex-wrap gap-2.5">
+        <FilterSelect label="Status" options={["All", "Active", "Pending", "Inactive", "Suspended"]} />
+        <FilterSelect label="Country" options={["All"]} />
+        <FilterSelect label="Tier" options={["All"]} />
       </div>
     </div>
   );
