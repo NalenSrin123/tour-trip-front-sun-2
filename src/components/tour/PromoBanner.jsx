@@ -2,9 +2,9 @@ import React from 'react'
 
 const PromoBanner = () => {
   return (
-    <section className=" px-5 py-10">
+    <section className="px-5 py-15 md:px-10 md:py-15">
       <div
-        className="relative mx-auto max-w-[1370px] overflow-hidden rounded-3xl
+        className="relative mx-auto max-w-[1200px] overflow-hidden rounded-3xl
         bg-cover bg-center"
         style={{
           backgroundImage:
@@ -14,23 +14,23 @@ const PromoBanner = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative min-h-[340px] px-8 py-10 md:px-14">
+        <div className="relative min-h-[160px] px-8 py-6 md:px-12">
           {/* Promo Label */}
-          <span className="absolute left-15 top-0 rounded-b-xl bg-[#ff674d] px-6 py-3 font-bold text-white">
+          <span className="absolute left-15 top-0 rounded-b-xl bg-[#ff674d] px-4 py-2 text-xs font-bold text-white">
             SPECIAL PROMO
           </span>
 
-          <div className="flex min-h-[340px] flex-col justify-center pt-8">
-            <h1 className="text-4xl font-extrabold text-white md:text-5xl">
+          <div className="flex min-h-[200px] flex-col justify-center pt-6">
+            <h1 className="text-2xl font-extrabold text-white md:text-3xl">
               Summer Adventure — Save 20%
             </h1>
 
-            <p className="mt-5 max-w-4xl text-lg text-white md:text-xl">
+            <p className="mt-2 max-w-3xl text-sm text-white md:text-base">
               Book your next adventure with code TRIPGO20 and enjoy exclusive
               premium travel benefits.
             </p>
 
-            <button className="mt-6 w-fit rounded-lg bg-[#ff674d] px-5 py-3 font-bold text-white hover:bg-[#ff543c]">
+            <button className="mt-4 w-fit rounded-lg bg-[#ff674d] px-4 py-2 text-sm font-bold text-white hover:bg-[#ff543c]">
               Book Now
             </button>
           </div>

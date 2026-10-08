@@ -43,12 +43,12 @@ const destinations = [
 const Popular_Destinations = () => {
   return (
     <section
-      className="bg-white px-6 py-20"
+      className="bg-white px-6 py-19"
       style={{
         fontFamily: "'Inter', 'Poppins', ui-sans-serif, system-ui, sans-serif",
       }}
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-[1200px]">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#14213D]">
             Popular Destinations

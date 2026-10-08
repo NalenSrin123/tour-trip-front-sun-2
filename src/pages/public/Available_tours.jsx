@@ -50,7 +50,7 @@ const tours = [
 export const Available_tours = () => {
   return (
     <section className=" px-5 py-16 md:px-10 md:py-24">
-      <div className=" mx-auto max-w-[1280px]">
+      <div className=" mx-auto max-w-[1145px]">
         <div className="mb-12 text-center md:mb-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#1A2B4C] md:text-[38px]">
             Available Tours in Mondulkiri

@@ -55,8 +55,8 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section className="bg-white px-5 py-20 md:px-10 lg:py-24">
-      <div className="mx-auto max-w-[1370px]">
+    <section className="bg-white px-5 py-15 md:px-10 lg:py-10">
+      <div className="mx-auto max-w-[1200px]">
         {/* Section Title */}
         <div className="mb-14 text-center">
           <h2 className="text-4xl font-extrabold text-[#1d3157] md:text-[40px]">
