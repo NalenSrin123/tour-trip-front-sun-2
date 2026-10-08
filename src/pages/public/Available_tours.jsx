@@ -50,7 +50,7 @@ const tours = [
 export const Available_tours = () => {
   return (
     <section className=" px-5 py-16 md:px-10 md:py-24">
-      <div className=" mx-auto max-w-[1145px]">
+      <div className=" mx-auto max-w-[1200px]">
         <div className="mb-12 text-center md:mb-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#1A2B4C] md:text-[38px]">
             Available Tours in Mondulkiri
@@ -63,7 +63,7 @@ export const Available_tours = () => {
           {tours.map((tour) => {
             const { id, location, description, day, rate1, rate2, price, image} = tour;
             return (
-              <div key={id} className="overflow-hidden rounded-2xl bg-slate-50 shadow border border-slate-200">
+              <div key={id} className="flex flex-col overflow-hidden rounded-2xl bg-slate-50 shadow border border-slate-200">
                 <div className="w-full">
                   <img
                     src={image}
@@ -72,8 +72,8 @@ export const Available_tours = () => {
                   />
                 </div>
 
-                <div className="p-4 ">
-                  <div className="w-full space-y-2.5">
+                <div className="p-4 flex-1 flex flex-col">
+                  <div className="w-full space-y-2.5 flex flex-col flex-1">
                     <a
                       href="#"
                       className="flex items-center gap-2 text-lg font-semibold text-[#069427]"
@@ -82,7 +82,7 @@ export const Available_tours = () => {
                       <span>{location}</span>
                     </a>
 
-                    <h1 className="truncate text-xl font-bold">
+                    <h1 className="text-xl text-wrap font-bold line-clamp-2 min-h-14">
                       {description}
                     </h1>
                     <div className="flex justify-between">
@@ -96,14 +96,19 @@ export const Available_tours = () => {
                       </h5>
                     </div>
                     <hr className="border-slate-200 border-t-2" />
-                    <div className="flex justify-between items-center">
-                      <div className="">
-                        <p className="text-slate-600">Price per person</p>
-                        <h3 className="text-red-600 text-2xl font-bold">$ {price}</h3>
+                    <div className="flex justify-between items-center gap-2 mt-auto">
+                      <div>
+                        <p className="text-slate-600 text-sm">Price per person</p>
+                        <h3 className="text-red-600 text-lg font-bold">$ {price}</h3>
                       </div>
                       <div>
-                        <button className="bg-blue-950 text-white font-bold p-2 px-4 rounded-xl cursor-pointer">
-                          View Details
+                        <button className="group rounded-md bg-blue-950 px-3 py-1.5 text-sm font-bold tracking-wide text-white transition-colors duration-200 hover:bg-blue-900 cursor-pointer leading-5 whitespace-nowrap">
+                          <span className="flex items-center gap-1">
+                            View Details
+                            <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </span>
                         </button>
                       </div>
                     </div>

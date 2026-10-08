@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
 import { TbHeartOff } from "react-icons/tb";
 
 const navLinks = [
-  { label: "Home", to: "/home" },
+  { label: "Home", to: "/" },
   { label: "Tours", to: "/tours" },
   { label: "Destinations", to: "/destinations" },
   { label: "About Us", to: "/about" },
@@ -23,13 +23,20 @@ const Header = () => {
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {navLinks.map((link) => (
-            <Link
+            <NavLink
               key={link.label}
               to={link.to}
-              className="text-[13px] font-medium text-[#142443] transition-colors hover:text-[#0da88d]"
+              end={link.to === "/home"}
+              className={({ isActive }) =>
+                `text-[13px] font-medium transition-colors hover:text-[#0da88d] ${
+                  isActive
+                    ? "text-[#0da88d] border-b-2 border-[#0da88d] pb-1"
+                    : "text-[#142443]"
+                }`
+              }
             >
               {link.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 

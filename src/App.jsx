@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "./components/layout/sidebar";
+import ScrollToTop from "./components/layout/ScrollToTop";
 import RequireAuth from "./components/layout/RequireAuth";
 import RevenueOverview from "./components/tour/RevenueOverview";
 import Destination from "./pages/admin/destinations/Destination";
@@ -12,7 +13,7 @@ import ExperienceDetail from "./pages/public/experience_detail";
 
 import CreateCustomer from './pages/admin/customers/create_customer'
 import CreateUsers from './pages/admin/users/CreateUsers'
-import DestinationDetail from './pages/public/DestinationDetail'
+import DestinationDetail from './pages/public/DestinationDetailPage'
 import Herosection from './pages/public/Herosection'
 import TourLight from './pages/public/tour/TourLight'
 import AuthenticKhmer from './components/tour/hero_section/AuthenticKhmer'
@@ -41,7 +42,8 @@ import Top_attractions from './pages/public/Top_attractions'
 import DestinationsPage from './pages/public/DestinationsPage'
 import { Available_tours } from './pages/public/Available_tours'
 import ToursPage from './pages/public/ToursPage'
-import HeroSectionAbout from './pages/public/HeroSectionAbout'  
+import AboutPage from './pages/public/AboutPage'
+import ContactPage from './pages/public/ContactPage'
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,6 +52,7 @@ function App() {
   return (
     <>
       {/* <Header /> */}
+      <ScrollToTop />
       <Routes>
           <Route path='/tours' element={<ToursPage />} />
           <Route path='/destinations' element={<DestinationsPage />} />
@@ -86,10 +89,11 @@ function App() {
              <Route path ="/tour-light" element={<TourLight/>}/>
              <Route path='/authentic-khmer' element={<AuthenticKhmer />} />
 
-             <Route path="/experience_detail" element={<ExperienceDetail />} />
           </Route>
           </Route>
-          <Route path='/about' element={<HeroSectionAbout/>}/>
+          <Route path='/about' element={<AboutPage/>}/>
+          <Route path='/contact' element={<ContactPage/>}/>
+          <Route path="/experience_detail" element={<ExperienceDetail />} />
 
           
       </Routes>
@@ -99,3 +103,4 @@ function App() {
 }
 
 export default App;
+

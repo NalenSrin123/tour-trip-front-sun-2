@@ -29,11 +29,11 @@ const infoItems = [
   },
 ];
 
-export default function DestinationDetail() {
+export default function DestinationDetailPage() {
   return (
     <div className="min-h-screen bg-white font-[Inter]">
       {/* Hero Section */}
-      <section className="relative h-[250px] overflow-hidden md:h-[300px]">
+      <section className="relative h-[420px] overflow-hidden md:h-[420px]">
         <img
           src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
           alt="Mondulkiri landscape"
@@ -42,16 +42,20 @@ export default function DestinationDetail() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/50" />
 
-        <div className="absolute inset-0 flex items-start pt-16 md:pt-20">
-          <div className="mx-auto max-w-[1150px] w-full px-6">
+        <div className="absolute inset-0 flex items-center">
+          <div className="mx-auto w-full max-w-[1150px] px-6">
             <nav aria-label="Breadcrumb" className="mb-3 md:mb-4">
               <ol className="flex items-center gap-2 text-[12px] md:text-[13px] text-white/70">
                 {breadcrumb.map((item, i) => (
                   <li key={item.label} className="flex items-center gap-2">
-                    {i > 0 && <span className="text-white/40">/</span>}
+                    {i > 0 && <span className="text-white/50">&gt;</span>}
                     <a
                       href={item.to}
-                      className="transition-colors hover:text-white"
+                      className={
+                        i === breadcrumb.length - 1
+                          ? 'font-semibold text-white'
+                          : 'transition-colors hover:text-white'
+                      }
                     >
                       {item.label}
                     </a>
@@ -60,10 +64,10 @@ export default function DestinationDetail() {
               </ol>
             </nav>
 
-            <h1 className="text-[28px] font-bold text-white leading-tight md:text-[36px]">
+            <h1 className="text-[30px] font-extrabold leading-tight text-white md:text-[40px]">
               Mondulkiri, Cambodia
             </h1>
-            <p className="mt-3 max-w-[550px] text-[14px] leading-relaxed text-white/85 md:text-[15px]">
+            <p className="mt-3 max-w-[600px] text-[14px] leading-relaxed text-white/85 md:text-[15px]">
               Journey to Cambodia's wild east — a land of rolling hills,
               thundering waterfalls, indigenous cultures, and sanctuary
               elephant reserves.

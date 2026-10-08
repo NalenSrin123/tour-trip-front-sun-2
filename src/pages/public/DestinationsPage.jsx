@@ -2,18 +2,20 @@ import React from 'react'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import Popular_Destinations from '../../components/tour/Popular_Destinations'
-// import Destination_HeroSection from '../../components/tour/hero_section/Destination_HeroSection'
 import Top_attractions from './Top_attractions'
 import TravelSection from './Practical_section'
+import DestinationDetail from './DestinationDetailPage'
+import { Available_tours } from './Available_tours'
 
 const DestinationsPage = () => {
   return (
     <>
       <Header/>
       <main>
-        {/* <Destination_HeroSection/> */}
-        <Popular_Destinations/>
+        {/*  */}
+        <DestinationDetail/>
         <Top_attractions/>
+        <Available_tours/>
         <TravelSection/>
       </main>
       <Footer/>
@@ -22,3 +24,4 @@ const DestinationsPage = () => {
 }
 
 export default DestinationsPage
+
