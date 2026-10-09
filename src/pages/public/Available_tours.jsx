@@ -49,7 +49,7 @@ const tours = [
 ];
 export const Available_tours = () => {
   return (
-    <section className=" px-5 py-16 md:px-10 md:py-24">
+    <section id="available-tours" className=" px-5 py-16 md:px-10 md:py-24">
       <div className=" mx-auto max-w-[1200px]">
         <div className="mb-12 text-center md:mb-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#1A2B4C] md:text-[38px]">
@@ -101,10 +101,10 @@ export const Available_tours = () => {
                         <p className="text-slate-600 text-sm">Price per person</p>
                         <h3 className="text-red-600 text-lg font-bold">$ {price}</h3>
                       </div>
-                      <div>
-                        <button className="group rounded-md bg-blue-950 px-3 py-1.5 text-sm font-bold tracking-wide text-white transition-colors duration-200 hover:bg-blue-900 cursor-pointer leading-5 whitespace-nowrap">
+                      <div className="mt-4">
+                        <button className=" flex group rounded-md bg-slate-900 hover:bg-slate-800 px-3 py-1.5 text-sm font-bold tracking-wide text-white transition-colors duration-200 hover:bg-blue-900 cursor-pointer leading-5 whitespace-nowrap">
+                          <span>View Details</span>
                           <span className="flex items-center gap-1">
-                            View Details
                             <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
