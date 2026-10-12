@@ -1,12 +1,9 @@
 const HighLighCompo = ({ icon, visit, txtPara }) => {
   return (
-    <div 
-    className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
+    <div className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
       <div
         className="
-        w-10 h-10
-        md:w-12 md:h-12
-        lg:w-16 lg:h-16
+        w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12
 
         flex items-center justify-center
 
@@ -24,11 +21,11 @@ const HighLighCompo = ({ icon, visit, txtPara }) => {
         {icon}
       </div>
 
-      <h2 className="text-sm lg:text-xl font-bold text-slate-800 mb-3">
+      <h2 className="text-sm lg:text-base font-bold text-slate-800 mb-2">
         {visit}
       </h2>
 
-      <p className="text-xs lg:text-base text-slate-500 leading-relaxed">
+      <p className="text-xs lg:text-sm text-slate-500 leading-relaxed">
         {txtPara}
       </p>
     </div>
@@ -36,3 +33,4 @@ const HighLighCompo = ({ icon, visit, txtPara }) => {
 };
 
 export default HighLighCompo;
+

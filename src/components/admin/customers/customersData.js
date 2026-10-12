@@ -1,0 +1,43 @@
+export const customers = [
+  {
+    id: 1,
+    initials: "SD",
+    name: "Sok Dara",
+    email: "sok.dara@email.com",
+    phone: "+855 12 345 678",
+    country: "Cambodia",
+    bookings: 8,
+    spent: "$642",
+    joined: "Jan 14, 2024",
+    status: "ACTIVE",
+    avatarColor: "bg-violet-300 text-indigo-700",
+  },
+  {
+    id: 2,
+    initials: "LF",
+    name: "Lena Ferreira",
+    email: "lena.f@email.com",
+    phone: "+351 91 222 333",
+    country: "Portugal",
+    bookings: 3,
+    spent: "$210",
+    joined: "Mar 02, 2024",
+    status: "ACTIVE",
+    avatarColor: "bg-orange-700 text-white",
+  },
+  {
+    id: 3,
+    initials: "JW",
+    name: "James Wu",
+    email: "james.wu@email.com",
+    phone: "+65 8123 4567",
+    country: "Singapore",
+    bookings: 0,
+    spent: "$0",
+    joined: "Jun 20, 2024",
+    status: "DEACTIVATED",
+    avatarColor: "bg-slate-200 text-slate-500",
+  },
+];
+export default customers
+

@@ -1,72 +1,35 @@
+import { customers } from "./customersData";
 import CustomerFilters from "./CustomerFilters";
 import CustomerRow from "./CustomerRow";
 import Pagination from "./Pagination";
 
 
 
-const customers = [
-  {
-    id: 1,
-    initials: "SD",
-    name: "Sok Dara",
-    email: "sok.dara@email.com",
-    phone: "+855 12 345 678",
-    country: "Cambodia",
-    bookings: 8,
-    spent: "$642",
-    joined: "Jan 14, 2024",
-    status: "ACTIVE",
-    avatarColor: "bg-violet-300 text-indigo-700",
-  },
-  {
-    id: 2,
-    initials: "LF",
-    name: "Lena Ferreira",
-    email: "lena.f@email.com",
-    phone: "+351 91 222 333",
-    country: "Portugal",
-    bookings: 3,
-    spent: "$210",
-    joined: "Mar 02, 2024",
-    status: "ACTIVE",
-    avatarColor: "bg-orange-700 text-white",
-  },
-  {
-    id: 3,
-    initials: "JW",
-    name: "James Wu",
-    email: "james.wu@email.com",
-    phone: "+65 8123 4567",
-    country: "Singapore",
-    bookings: 0,
-    spent: "$0",
-    joined: "Jun 20, 2024",
-    status: "DEACTIVATED",
-    avatarColor: "bg-slate-200 text-slate-500",
-  },
-];
+
 
 export default function CustomerTable() {
   return (
-    <section className="overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
+    <section className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
       <CustomerFilters />
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[1150px]">
-          <thead className="border-y border-slate-300 bg-[#e9eeff]">
-            <tr className="text-sm font-semibold uppercase tracking-wide text-slate-700">
-              <th className="px-6 py-5">Customer</th>
-              <th className="px-6 py-5">Contact</th>
-              <th className="px-6 py-5">Location</th>
-              <th className="px-6 py-5 text-center">Bookings</th>
-              <th className="px-6 py-5 text-center">Spent</th>
-              <th className="px-6 py-5">Joined</th>
-              <th className="px-6 py-5">Status</th>
-              <th className="px-6 py-5 text-center">Actions</th>
+        <table className="w-full min-w-[1050px] border-collapse">
+          <thead>
+            <tr className="bg-slate-50 text-left text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+              <th className="w-10 px-4 py-3">
+                <input type="checkbox" className="rounded border-slate-300" />
+              </th>
+              <th className="px-4 py-3">Customer</th>
+              <th className="px-4 py-3">Location</th>
+              <th className="px-4 py-3 text-center">Bookings</th>
+              <th className="px-4 py-3 text-right">Total Spent</th>
+              <th className="px-4 py-3">Joined</th>
+              <th className="px-4 py-3">Status</th>
+              <th className="px-4 py-3 text-center">Actions</th>
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="divide-y divide-slate-100">
             {customers.map((customer) => (
               <CustomerRow key={customer.id} customer={customer} />
             ))}

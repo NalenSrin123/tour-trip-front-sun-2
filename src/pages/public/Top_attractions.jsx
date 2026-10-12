@@ -24,7 +24,7 @@ const attraction = [
 const Top_attractions = () => {
   return (
     <section className="bg-[#f5f6f8ed] px-5 py-16 md:px-10 md:py-24">
-      <div className="mx-auto max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px]">
         <div className="mb-12 text-center md:mb-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#1A2B4C] md:text-[38px]">
             Top Attractions in Mondulkiri

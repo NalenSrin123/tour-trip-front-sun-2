@@ -3,7 +3,7 @@ import React from 'react'
 const Tours_detailContent = () => {
   return (
     <>
-        <div className='w-full flex gap-4 p-[20px]'>
+        <div className='mx-auto max-w-[1200px] w-full flex gap-4 p-[20px] py-15'>
             {/* =========>>  section <<======= */}
             <div className="section w-[60%] flex flex-col gap-4">
                 {/* title section-content */}

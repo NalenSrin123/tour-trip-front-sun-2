@@ -108,8 +108,8 @@ function TourCard({ tour }) {
 
 export default function FeaturedTourPackages() {
   return (
-    <section className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-slate-50 min-h-screen py-15 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
             Featured Tour Packages

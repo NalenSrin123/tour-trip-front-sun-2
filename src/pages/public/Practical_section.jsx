@@ -51,7 +51,7 @@ export default function MondulkiriTravelSection() {
     <div className="bg-white font-sans text-stone-800">
       {/* Practical tips */}
       <section className="bg-emerald-50/60 px-6 py-16 sm:px-10 lg:px-16">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-2 lg:items-center">
           <div className="overflow-hidden rounded-2xl shadow-sm">
             <img
               src="https://i.pinimg.com/736x/fd/01/82/fd0182ecf1351af8852e71c953a98254.jpg"

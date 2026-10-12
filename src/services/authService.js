@@ -1,4 +1,8 @@
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/+$/, '')
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL ??
+  import.meta.env.base_url ??
+  ''
+).replace(/\/+$/, '')
 const SESSION_STORAGE_KEY = 'traveladmin.session'
 const REMEMBERED_EMAIL_KEY = 'traveladmin.rememberedEmail'
 
@@ -14,7 +18,7 @@ async function requestLogin(credentials) {
   if (!response.ok) {
     throw new Error(data?.message ?? 'Invalid email or password.')
   }
-  return { token: data.token, user: data.user ?? null }
+  return { token: data.access_token ?? data.token, user: data.user ?? null }
 }
 
 async function mockLogin({ email, password }) {

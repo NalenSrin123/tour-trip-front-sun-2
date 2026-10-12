@@ -35,7 +35,7 @@ const ExperienceDetails = () => {
      return (
           <div className="min-h-screen bg-white">
                {/* Main Container */}
-               <div className="mx-auto max-w-6xl px-5 py-8">
+               <div className="mx-auto max-w-[1200px] px-5 py-10">
                     {/* Back Button */}
                     <button
                          type="button"
