@@ -118,9 +118,9 @@ export default function LoginPage({ onSuccess }) {
                   <span>{authError}</span>
                 </p>
               )}
-              {SuccessMessage && (
+              {success && (
                 <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-sm text-green-600">{SuccessMessage}</p>
+                  <p className="text-sm text-green-600">{success}</p>
                 </div>
               )}
 
