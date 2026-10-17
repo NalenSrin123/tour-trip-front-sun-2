@@ -1,11 +1,11 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Destination from './pages/admin/destinations/Destination'
+import Destination from './pages/admin/destinations/Add_Destination'
 import { RegisterForm } from './pages/auth/RegisterForm'
 import LoginPage from './pages/auth/LoginPage'
 import BookingList from './components/booking/BookingList'
 import Customers from './components/admin/customers/Customers'
-import Destinations from './pages/admin/destinations/destinations'
+import Destinations from './pages/admin/destinations/Destinations'
 import RevenueOverview from './components/tour/RevenueOverview'
 import Sidebar from './components/layout/sidebar'
 import PageListUser from './pages/admin/users/page_list_user'
@@ -32,6 +32,7 @@ import Tours_detailContent from './components/tour/tours_detailContent/Tours_det
 import Popular_Destinations from './components/tour/Popular_Destinations'
 import Top_attractions from './pages/public/Top_attractions'
 import { Available_tours } from './pages/public/Available_tours'
+import VerifyOtp from './pages/auth/Verify_Otp'
 function App() {
   return (
     <>
@@ -41,8 +42,9 @@ function App() {
           <Route path='/herosection' element={heroSection}/>
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/login' element={<LoginPage/>}/>
+          <Route path = '/verify' element = {<VerifyOtp/>}/>
           <Route path="/tourpackages" element={<FeaturedTourPackages />} />
-          <Route path='/home' element={<HomePage />} />
+          <Route path='/' element={<HomePage />} />
           <Route path="/detail-content" element={<Tours_detailContent />} />
           <Route element={<Sidebar />}>
           <Route path='/listbooking' element={<BookingList/>}/>
@@ -55,7 +57,7 @@ function App() {
           <Route path='/create-user' element={<CreateUsers />} />
           <Route path='/users' element={<PageListUser />} />
           <Route path="/guides" element={<GuidesList />} />
-           <Route path="/" element={<Destination />} />
+           <Route path="/add_destinations" element={<Destination />} />
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/bookings" element={<BookingList />} />
             <Route path="/customers" element={<Customers />} />
@@ -64,7 +66,6 @@ function App() {
           </Route>
           
       </Routes>
-    
     </>
   );
 }

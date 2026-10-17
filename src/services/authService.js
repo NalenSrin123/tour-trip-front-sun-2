@@ -1,20 +1,31 @@
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/+$/, '')
+const API_BASE_URL = (import.meta.env.VITE_BASE_URL ?? '').replace(/\/+$/, '')
 const SESSION_STORAGE_KEY = 'traveladmin.session'
 const REMEMBERED_EMAIL_KEY = 'traveladmin.rememberedEmail'
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 async function requestLogin(credentials) {
-  const response = await fetch(`${API_BASE_URL}/auth/login`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(credentials),
-  })
-  const data = await response.json().catch(() => null)
-  if (!response.ok) {
-    throw new Error(data?.message ?? 'Invalid email or password.')
+  try {
+    const response = await fetch(`${API_BASE_URL}/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(credentials),
+    })
+    const data = await response.json();
+    if(!response.ok){
+      throw new Error(data.message || "Login failse.");
+    }
+    return {
+      token: data.access_token,
+      tokenType: data.token_type,
+      user: data.user ?? null,
+    }
+  } catch (error) {
+     throw error;
   }
-  return { token: data.token, user: data.user ?? null }
 }
 
 async function mockLogin({ email, password }) {

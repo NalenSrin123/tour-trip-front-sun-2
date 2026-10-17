@@ -3,7 +3,7 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const menuPaths = {
   DashBoard: ["/dashboard", "/sidebar"],
-  Destinations: ["/", "/destination", "/destinations", "/table_destinations"],
+  Destinations: ["/", "/destination", "/destinations", "/table_destinations", "/add_destinations",],
   Guides: ["/guides"],
   Bookings: ["/bookings", "/listbooking"],
   Customers: ["/customers", "/customer", "/createcustomer"],
@@ -26,7 +26,6 @@ const Sidebar = () => {
     "Reports",
     "Settings",
   ];
-
   return (
     <div className="flex min-h-screen bg-slate-100">
       <aside className="w-64 shrink-0 bg-[#312E81] p-5 text-slate-100 shadow-lg">
@@ -79,7 +78,6 @@ const Sidebar = () => {
           </button>
         </div>
       </aside>
-
       <div className="min-w-0 flex-1">
         <header className="border-b border-slate-200 bg-white px-6 py-[18px] shadow-sm shadow-slate-200/50">
           <div className="flex items-center justify-between gap-4">
